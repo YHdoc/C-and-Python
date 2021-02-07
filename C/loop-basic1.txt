@@ -1,0 +1,16 @@
+#This is basic for loop in C. / C언어 반복문의 기본 for문 입니다.
+
+#include <stdio.h>
+
+int main()
+{
+	int input;
+	scanf("%d", &input);
+	
+  for(int i=1; i<10; i++)
+	{
+    printf("%i X %i = %i\n",input ,i ,input*i);
+  }
+
+  return 0;
+}
