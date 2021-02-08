@@ -1,0 +1,19 @@
+#This is basic instruction for while loop / while반복문 기초 
+
+
+#include <stdio.h>
+
+int main()
+{
+	int input;
+	scanf("%d", &input);
+	
+	int i = 1;
+	while(i<10)
+	{
+		printf("%i X %i = %i\n",input ,i ,input*i);
+		i++;
+	}
+
+	return 0;
+}
