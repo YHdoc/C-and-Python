@@ -1,0 +1,120 @@
+#include <stdio.h>
+
+int Scan()
+{
+	int number;
+	scanf_s("%d", &number);
+	return number;
+}
+
+
+void main()
+{
+	//조건에 따라 다른 반복문을 만들기 위해 실행
+	//내가 입력을 해서 입력값이 1번이면 종료가 되고 1번이 아니면 그에 해당하는 동작을 해라 -> 이런 반복문을 만들고 싶다면?
+	/*while(1)
+	{
+		int select = Scan();
+		if (select == 1)
+		{
+			break;
+		}
+		else if (select == 2)
+		{
+			printf("하하하");
+		}
+		else if (select == 3)
+		{
+			printf("하하하히후헤호");
+		}
+	}*/
+
+	/*int Select = 0;
+	
+	do
+	{
+		printf("하히호예호");
+	} while (Select != 0);*/
+
+	//do-while문은 무언가를 1회 이상 무조건 반복해야 할 때 사용하는 것이다.
+
+
+	//int Number = Scan();
+
+	//int Sum = 0;
+	//Number -> 1더하는 프로그램
+	/*while (Number != 1)
+	{
+		Sum += Number;
+		Number -= 1;
+	}*/
+	//do
+	//{
+	//	Sum += Number;
+	//	Number -= 1;
+	//	printf("%d\n", Sum);
+	//} while (Sum != 0);
+	
+
+	int Level = 0;
+	int Exp = 0;
+	int Menu = 0;
+
+	/*do
+	{
+		printf("레벨 : [%d] 경험치 : [%d/%d]\n", Level, Exp, Level * 100);
+		printf("1.경험치 획득 2.종료\n");
+		Menu = Scan();
+
+		if (Menu == 1)
+		{
+			printf("얼만큼을 획득하시겠습니까 : ");
+			Exp += Scan();
+			if (Exp >= Level * 100)
+			{
+				Level += 1;
+			}
+		}
+	} while (Menu != 2);*/
+	
+	//do
+	//{
+	//	printf("레벨 : [%d] 경험치 : [%d/%d]\n", Level, Exp, Level * 100);
+	//	printf("1.경험치 획득 2.종료\n");
+	//	Menu = Scan();	//무조건 1회 실행되도록 만들었음
+
+	//	if (Menu == 1)
+	//	{
+	//		printf("얼만큼을 획득하시겠습니까 : ");
+	//		Exp += Scan();
+	//		
+	//		do		//level up의 경우 무조건 실행되도록 하면 안 된다.
+	//		{		
+	//			Exp = Exp - Level * 100;
+	//			Level = Level + 1;
+	//		} while(Exp >= Level * 100);
+
+	//	}
+	//} while (Menu != 2);
+
+	int i = 0;
+
+	do
+	{
+		++i;
+		printf("AA");
+		continue;	//do-while문, 반복문의 continue는 조건쪽, 즉 i<5 쪽으로 가서 바로 조건을 읽는다. 그렇기에 여기에서 AA는 무한히 반복되는 것이 아니라 조건을 만족하는 순간까지만 AA를 출력하고 반복문을 끝낸다.
+	} while (i < 5);
+
+	//while (i < 5)
+	//{
+
+	//	++i;
+	//	printf("AA");
+	//	continue;
+	//	printf("BB");
+	//	break;
+	//}
+
+
+}
