@@ -1,0 +1,20 @@
+#pragma region 비트연산자
+
+
+#include<stdio.h>
+#include<Windows.h>
+
+int main()
+{
+	int stdIntiger;	//기준정수
+	int calcIntiger;	//연산정수
+
+	printf("기준이 되는 정수를 입력하세요: ");
+	scanf_s("%d", &stdIntiger);
+	printf("쉬프트연산 할 정수를 입력하세요: ");
+	scanf_s("%d", &calcIntiger);
+
+	printf("result = %d", (10 <= calcIntiger) ? stdIntiger<<calcIntiger : stdIntiger >> calcIntiger);
+}
+
+#pragma endregion
