@@ -1,0 +1,40 @@
+#include<stdio.h>
+#include<Windows.h>
+
+
+int main()
+{
+	int sec, num;
+
+	printf("시간을 입력하세요(초단위로 입력): ");
+	scanf_s("%d", &sec);
+	printf("\n1.Day\n2.Hour\n3.Minute\n어떤 시간으로 변환하시겠습니까?: ");
+
+	float sectoday = sec / 86400.0f;
+	float sectohr = sec / 3600.0f;
+	float sectomin = sec / 60.0f;
+	
+	scanf_s("%d", &num);
+
+	switch(num)
+	{
+
+	case 1:
+		printf("입력한 시간 [%d]초를 일로 계산하면 약 [%.2f]일 입니다.",sec, sectoday);
+		break;
+	case 2:
+		printf("입력한 시간 [%d]초를 시간으로 계산하면 약 [%.2f]시간 입니다.", sec, sectohr);
+		break;
+	case 3:
+		printf("입력한 시간 [%d]초를 분으로 계산하면 약 [%.2f]분 입니다.", sec, sectomin);
+		break;
+
+	default:
+		printf("올바른 숫자를 입력해주세요.");
+		break;
+	}
+		
+	
+	system("pause");
+	return 0;
+}
