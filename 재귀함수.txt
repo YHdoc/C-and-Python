@@ -1,0 +1,23 @@
+//재귀함수(재귀호출)
+
+
+#include <stdio.h>
+
+void Hello(int count)
+{
+    if (count == 0)		//종료 조건을 만든 것. count가 0이 되면 'stop'을 출력하고 hello함수를 호출하지 않고 끝낸다.
+    {
+        printf("stop");
+        return 0;
+    }
+    printf("Hello, world! %d\n", count);
+
+    Hello(--count);		//count함수가 다음번에 호출될 땐 count가 1 감소되어 대입된다.
+}
+
+int main()
+{
+    Hello(10);		//hello 함수 호출
+
+    return 0;
+}
